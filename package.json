@@ -1,0 +1,29 @@
+{
+  "name": "sample-flow",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "jest",
+    "app:build": "yarn workspace @sf/app run build",
+    "app:watch": "yarn workspace @sf/app run watch",
+    "server:build": "yarn workspace @sf/server run build",
+    "server:dev": "yarn workspace @sf/server run dev",
+    "build": "yarn run app:build && yarn run server:build",
+    "dev": "parallel-run app:watch server:dev",
+    "storybook": "yarn workspace @sf/storybook storybook",
+    "storybook:build": "yarn workspace @sf/storybook build-storybook",
+    "docker:dev": "docker-run dev 3000",
+    "docker:storybook": "docker-run storybook 6006"
+  },
+  "private": true,
+  "workspaces": [
+    ".devtools",
+    "packages/**",
+    "storybook",
+    "server"
+  ],
+  "devDependencies": {
+    "@sf/devtools": "^0.0.1",
+    "typescript": "^4.0.3"
+  }
+}
