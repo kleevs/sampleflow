@@ -1,2 +1,0 @@
-#!bash
-docker run --rm -it -v /$(pwd):/src -w //src -p $2:$2 node:16 npm run $1

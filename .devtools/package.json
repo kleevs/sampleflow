@@ -1,9 +1,0 @@
-{
-  "name": "@sf/devtools",
-  "version": "0.0.1",
-  "description": "",
-  "bin": {
-    "docker-run": "./bin/docker-run",
-    "parallel-run": "./bin/parallel-run"
-  }
-}

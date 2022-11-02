@@ -1,6 +1,0 @@
-#!bash
-for var in "$@"
-do
-    yarn $var &
-done
-true
